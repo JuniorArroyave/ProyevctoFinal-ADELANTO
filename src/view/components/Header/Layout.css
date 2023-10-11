@@ -1,0 +1,32 @@
+.header {
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header__title {
+    color: white;
+}
+
+.header__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.header__list a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+main {
+    min-height: calc(100vh - 83px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
