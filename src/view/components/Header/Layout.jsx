@@ -6,6 +6,7 @@ export const Layout = () => {
   return (
     <>
       <header className='header'>
+        <Link to='/'><box-icon name='book-open' color='#f9f5f5' size='md' /></Link>
         <h1 className='header__title'>Virtual Schedule</h1>
         <nav className='header__menu'>
           <ul className='header__list'>
