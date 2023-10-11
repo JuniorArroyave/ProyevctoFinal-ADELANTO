@@ -17,7 +17,7 @@ export const Layout = () => {
       <main>
         <Outlet />
       </main>
-      <footer>
+      <footer className='footer'>
         <h1>Este es el footer</h1>
       </footer>
     </>
