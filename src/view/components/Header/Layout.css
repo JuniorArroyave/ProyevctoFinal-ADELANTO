@@ -1,9 +1,13 @@
 .header {
-    background-color: grey;
+    box-shadow: 0px 8px 23px -8px rgba(13,17,23,0.77);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+}
+
+body {
+    background-color: #161b22;
 }
 
 .header__title {
@@ -25,10 +29,13 @@
 }
 
 main {
+    padding: 50px;
     min-height: calc(100vh - 83px);
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 8px 23px -8px rgba(13,17,23,0.77);
+
 }
 
 
@@ -36,4 +43,33 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container__footer {
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.redes {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+
+.information__footer {
+    color: #7d8580;
+}
+
+.information {
+
+    flex-direction: column;
+    display: flex;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+box-icon {
+    cursor: pointer;
 }
