@@ -13,7 +13,7 @@
 
 .content__title {
     font-size: 70px;
-    color: aliceblue;
+    color: white;
     font-family: 'Pacifico';
     margin-bottom: 10px;
 }
@@ -21,7 +21,7 @@
 .content__description {
     font-size:30px;
     font-family: 'Tilt Neon';
-    color: #7d8580;
+    color: rgba(255, 255, 255, 0.87);
 }
 
 .carrusel {
