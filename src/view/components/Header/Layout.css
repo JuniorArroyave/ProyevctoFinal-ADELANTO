@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&family=Unbounded&display=swap');
+
+
 .header {
     box-shadow: 0px 8px 23px -8px rgba(13,17,23,0.77);
     display: flex;
@@ -12,20 +15,31 @@ body {
 
 .header__title {
     color: white;
+    font-family: 'Titan One';
+    font-weight: 100;
 }
 
 .header__list {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 27px;
     list-style: none;
 }
 
 .header__list a {
     text-decoration: none;
+    font-family: 'Unbounded';
     color: white;
     font-size: 18px;
+    transition: 0.3s;
+}
+
+.header__list a:hover {
+    width: 100px;
+    text-decoration: underline;
+    font-size: 19px;
+    box-shadow: 0px 8px 23px -8px rgba(255, 255, 255, 0.77);
 }
 
 main {

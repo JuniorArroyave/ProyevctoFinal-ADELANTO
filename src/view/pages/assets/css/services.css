@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga&display=swap');
+
+.container__services {
+    width: 80%;
+}
+
+.container__table {
+    display: flex;
+    padding-block: 15px;
+    justify-content: center;
+    text-align: center;
+    background-color: #353836;
+    border-radius: 20px ;
+    border: 1px solid rgba(255, 255, 255, 0.541);
+}
+
+.task__complete {
+    width: 50%;
+}
+
+.buttons__task__complete {
+    border-right: 1px solid rgba(255, 255, 255, 0.541);
+}
+
+.task__pending {
+    width: 50%;
+}
+
+.task__complete__title {
+    gap: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    font-family: 'Lexend Giga', sans-serif;    padding: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.541);
+}
+
+.task__pending__title {
+    gap: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    padding: 20px;
+    font-family: 'Lexend Giga', sans-serif;    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.541);
+}
+
+input {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding: 17px;
+    width: 90%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+}
+
+
