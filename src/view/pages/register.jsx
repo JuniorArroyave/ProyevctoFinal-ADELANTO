@@ -21,7 +21,7 @@ export const Register = () => {
             </div>
           </div>
           <button className='RegisterButton'>Registrarme</button>
-          <Link className='SigninButton' to='/sign-in'>¿Ya tienes una cuenta?</Link>
+          <Link className='SigninButtonRedirect' to='/sign-in'>¿Ya tienes una cuenta?</Link>
         </div>
       </div>
     </>

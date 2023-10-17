@@ -1,9 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { Layout } from '../components/Layout/Layout.jsx'
 import { Home } from '../pages/home.jsx'
-import { Services } from '../pages/services.jsx'
+import { Tasks } from '../pages/tasklist.jsx'
 import { SignIn } from '../pages/SignIn.jsx'
 import { Register } from '../pages/register.jsx'
+import { CreateTask } from '../pages/createtaskform.jsx'
 
 export const router = createBrowserRouter([
   {
@@ -15,8 +16,8 @@ export const router = createBrowserRouter([
         Component: Home
       },
       {
-        path: 'services',
-        Component: Services
+        path: 'tasks',
+        Component: Tasks
       },
       {
         path: 'sign-in',
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: 'register',
         Component: Register
+      },
+      {
+        path: 'createtask',
+        Component: CreateTask
       }
     ]
   }

@@ -1,6 +1,6 @@
-import './assets/css/services.css'
+import './assets/css/tasklist.css'
 
-export const Services = () => {
+export const Tasks = () => {
   return (
     <>
       <div className='container__services'>
