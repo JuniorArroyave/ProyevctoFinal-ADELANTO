@@ -17,11 +17,6 @@ export const CreateTask = () => {
                 <input id='Fechafinalizacion' className='inputs__form date' type='date' />
               </label>
             </div>
-            <h3 className='status__title'>Estado</h3>
-            <div className='status__container'>
-              <p className='status__check'><input className='check__task' placeholder='Estado' type='checkbox' /> Pendiente</p>
-              <p className='status__check'><input className='check__task' placeholder='Estado' type='checkbox' /> Finalizada</p>
-            </div>
           </div>
           <button className='RegisterButtonTask'>Registrar Tarea</button>
         </div>

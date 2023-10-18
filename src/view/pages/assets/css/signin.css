@@ -66,9 +66,15 @@
     width: 50%;
     height: 40px;
     margin-top: 20px;
-    border: 1px solid;
+    border: none;
     border-radius: 5px;
     background-color: black;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.SigninButton:hover {
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.58);
 }
 
 .RegisrerButtonRedirect {

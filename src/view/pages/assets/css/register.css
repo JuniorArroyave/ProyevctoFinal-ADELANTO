@@ -32,7 +32,7 @@
     padding: 16px;
 }
 
-.list__buttons__div {
+.list__buttons__div__register {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,6 +57,7 @@
     border-left: none;
     width: 100%;
     height: 40px;
+    padding: 5px;
 }
 
 .RegisterButton {
@@ -65,10 +66,16 @@
     width: 50%;
     height: 40px;
     margin-top: 20px;
-    border: 1px solid;
+    border: none;
     border-radius: 5px;
     color: white;
     background-color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.RegisterButton:hover {
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.58);
 }
 
 .SigninButtonRedirect {
@@ -76,7 +83,13 @@
     text-decoration: none;
     margin-top: 17px;
     font-size: 17px;
-    color:black
+    color:black;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.SigninButtonRedirect:hover {
+    text-decoration: underline;
 }
 
 .container__title__form {

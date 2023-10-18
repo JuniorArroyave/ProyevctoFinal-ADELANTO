@@ -13,7 +13,7 @@ export const SignIn = () => {
           <div className='list__buttons__form'>
             <div className='list__buttons__div2'>
               <input className='inputs__form' placeholder='Correo' type='text' />
-              <input className='inputs__form' placeholder='Contraseña' type='text' />
+              <input className='inputs__form' placeholder='Contraseña' type='password' />
             </div>
           </div>
           <button className='SigninButton'>Iniciar Sesión</button>

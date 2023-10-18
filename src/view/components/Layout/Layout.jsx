@@ -16,7 +16,7 @@ export const Layout = () => {
           <ul className='header__list'>
             <li><Link to='/'>Inicio</Link></li>
             <li><Link to='/register'>Registrarme</Link></li>
-            <li><Link to='/sign-in'>Inicias Sesion</Link></li>
+            <li><Link to='/sign-in'>Iniciar Sesion</Link></li>
           </ul>
         </nav>
       </header>

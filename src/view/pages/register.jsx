@@ -11,13 +11,13 @@ export const Register = () => {
             <p className='text__title__form'>Virtual Schedule</p>
           </div>
           <div className='list__buttons__form'>
-            <div className='list__buttons__div'>
+            <div className='list__buttons__div__register'>
               <input className='inputs__form' placeholder='Nombre' type='text' />
               <input className='inputs__form' placeholder='Apellido' type='text' />
             </div>
             <div className='list__buttons__div2'>
               <input className='inputs__form' placeholder='Correo' type='text' />
-              <input className='inputs__form' placeholder='Contraseña' type='text' />
+              <input className='inputs__form' placeholder='Contraseña' type='password' />
             </div>
           </div>
           <button className='RegisterButton'>Registrarme</button>
