@@ -5,6 +5,7 @@ import { Tasks } from '../pages/tasklist.jsx'
 import { SignIn } from '../pages/SignIn.jsx'
 import { Register } from '../pages/register.jsx'
 import { CreateTask } from '../pages/createtaskform.jsx'
+import { ErrorPage } from '../pages/Errorpage.jsx'
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +32,7 @@ export const router = createBrowserRouter([
         path: 'createtask',
         Component: CreateTask
       }
-    ]
+    ],
+    ErrorBoundary: ErrorPage
   }
 ])

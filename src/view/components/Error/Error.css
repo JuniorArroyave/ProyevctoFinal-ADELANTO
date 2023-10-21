@@ -1,0 +1,26 @@
+.error {
+    box-shadow: 0px 0px 82px 17px rgba(111,185,212,1);
+    border-radius: 20px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin: auto;
+}
+
+.error h1, h2, p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.error a {
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 7px;
+    background: #000;
+    border-radius: 7px;
+}
