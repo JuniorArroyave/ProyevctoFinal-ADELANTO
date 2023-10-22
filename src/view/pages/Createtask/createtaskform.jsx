@@ -1,4 +1,4 @@
-import './assets/css/createtaskform.css'
+import './createtaskform.css'
 
 export const CreateTask = () => {
   return (

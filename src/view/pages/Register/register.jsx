@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import './assets/css/register.css'
+import './register.css'
 
 export const Register = () => {
   return (

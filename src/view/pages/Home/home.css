@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Tilt+Neon&display=swap');
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 50%;
+}
+
+.content__title {
+    font-size: 70px;
+    color: white;
+    font-family: 'Pacifico';
+    margin-bottom: 10px;
+}
+
+.content__description {
+    font-size:30px;
+    font-family: 'Tilt Neon';
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+
+

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import './assets/css/tasklist.css'
+import './tasklist.css'
 
 export const Tasks = () => {
   return (
