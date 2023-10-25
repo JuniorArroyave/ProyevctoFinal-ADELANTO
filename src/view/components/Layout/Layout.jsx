@@ -1,6 +1,5 @@
 import { Link, Outlet } from 'react-router-dom'
 import './Layout.css'
-import 'boxicons'
 
 /* <li><Link to='/services'>Servicios</Link></li> */
 
@@ -26,9 +25,7 @@ export const Layout = () => {
       <footer className='footer'>
         <div className='container__footer'>
           <div className='redes'>
-            <box-icon name='facebook-square' size='md' color='#dfe4e0' type='logo' />
-            <box-icon name='instagram' size='md' color='#dfe4e0' type='logo' />
-            <box-icon name='whatsapp' size='md' color='#dfe4e0' type='logo' />
+            <h1>face</h1>
           </div>
           <div className='information'>
             <p className='information__footer'>Jacobo Garcés -- Mentor</p>

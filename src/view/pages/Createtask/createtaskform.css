@@ -39,7 +39,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
     width: 100%;
 }
 
@@ -64,6 +64,7 @@
 }
 
 .RegisterButtonTask {
+    cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     width: 50%;
@@ -92,17 +93,9 @@
     font-weight: 100;
 }
 
-.status__container {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    gap: 30px;
-}
-
-.status__title {
-    font-family: 'Unbounded';
-}
-
-.status__check {
-    font-family: cursive;
+.description {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 100px;
+    background-color: #80808050;
 }
