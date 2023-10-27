@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
 import './signin.css'
+import { useState } from 'react'
 
 export const SignIn = () => {
+  const [userId, setUserId] = useState(null)
   const handleSubmitSignin = (event) => {
     event.preventDefault()
     let body = {}
@@ -18,7 +20,9 @@ export const SignIn = () => {
       body: JSON.stringify(body)
     }).then(response => response.json())
       .then(response => {
+        setUserId(response.user._id)
         window.alert('Bienvenido ' + response.user.firstName)
+        window.location.href = '/createtask'
       })
   }
   return (

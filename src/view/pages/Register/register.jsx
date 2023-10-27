@@ -19,6 +19,8 @@ export const Register = () => {
     }).then(response => response.json())
       .then(response => {
         window.alert('el usuario ' + response.user.firstName + ' se creó correctamernte')
+        event.target.reset()
+        window.location.href = '/sign-in'
       })
   }
   return (

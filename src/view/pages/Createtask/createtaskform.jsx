@@ -1,6 +1,6 @@
 import './createtaskform.css'
 
-export const CreateTask = () => {
+export const CreateTask = ({ userId }) => {
   const handleSubmitTask = (event) => {
     event.preventDefault()
     let body = {}
@@ -10,6 +10,9 @@ export const CreateTask = () => {
         body = { ...body, [element.name]: element.value }
       }
     }
+
+    body.userId = userId
+
     fetch('https://birsbane-numbat-zjcf.1.us-1.fl0.io/api/todo', {
       method: 'POST',
       headers: {
@@ -17,7 +20,8 @@ export const CreateTask = () => {
       }
     }).then(response => response.json())
       .then(response => {
-        window.alert('Se creó correctamente la tarea' + response.name)
+        response.isCompleted = false
+        window.alert('Se creó correctamente la tarea' + response.todo.name)
       })
   }
   return (
@@ -31,10 +35,10 @@ export const CreateTask = () => {
             </div>
             <div className='list__buttons__form'>
               <div className='list__buttons__div'>
-                <input required name='nametask' id='nametask' className='inputs__form' type='text' placeholder='Dale un nombre a tu tarea' />
-                <textarea required name='descriptiontask' className='description inputs__form' id='descriptiontask' rows='10' placeholder='Agrega una descripción para tu tarea' />
-                <label className='label__fecha__finalizacion' htmlFor='datetask'>Fecha de finalizacion
-                  <input required name='datetask' id='datetask' className='inputs__form date' type='date' />
+                <input required name='name' id='name' className='inputs__form' type='text' placeholder='Dale un nombre a tu tarea' />
+                <textarea required name='description' className='description inputs__form' id='description' rows='10' placeholder='Agrega una descripción para tu tarea' />
+                <label className='label__fecha__finalizacion' htmlFor='finishDate'>Fecha de finalizacion
+                  <input required name='finishate' id='finishDate' className='inputs__form date' type='date' />
                 </label>
               </div>
             </div>
