@@ -21,6 +21,7 @@
     padding: 10px;
 }
 
+
 .list__buttons__form {
     width: 100%;
     margin-top: 5px;
@@ -93,13 +94,12 @@
 }
 
 .container__title__form {
-    font-size: 25px;
     padding-block: 6px;
     font-family: 'Unbounded';
 }
 
 .text__title__form {
-    font-size: 19px;
     font-family: 'Titan One';
+    font-size: 10px;
     font-weight: 100;
 }

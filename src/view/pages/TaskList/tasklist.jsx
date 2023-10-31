@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './tasklist.css'
+import { Taskcomplete, Taskpending } from '../../components/icons/icons'
 
 export const Tasks = () => {
   return (
@@ -7,7 +8,7 @@ export const Tasks = () => {
       <div className='task'>
         <div className='container__task'>
           <div className='complete__task__container'>
-            <h1 className='complete__task__title'>Tareas completadas</h1>
+            <h1 className='complete__task__title'> <Taskcomplete /> Tareas completadas</h1>
             <div className='task__complete'>
               <div className='task__nombre'>
                 <p>Campo vacio</p>
@@ -24,7 +25,7 @@ export const Tasks = () => {
             </div>
           </div>
           <div className='pending__task__container'>
-            <h1 className='pending__task__title'> Tareas Pendientes</h1>
+            <h1 className='pending__task__title'><Taskpending /> Tareas Pendientes</h1>
             <div className='task__pending'>
               <div className='task__nombre'>
                 <p>Campo vacio</p>

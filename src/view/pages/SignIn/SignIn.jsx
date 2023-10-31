@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom'
 import './signin.css'
-import { useState } from 'react'
+import { LogoForForm } from '../../components/icons/icons'
 
 export const SignIn = () => {
-  const [userId, setUserId] = useState(null)
   const handleSubmitSignin = (event) => {
     event.preventDefault()
     let body = {}
@@ -20,8 +19,8 @@ export const SignIn = () => {
       body: JSON.stringify(body)
     }).then(response => response.json())
       .then(response => {
-        setUserId(response.user._id)
         window.alert('Bienvenido ' + response.user.firstName)
+        globalThis.localStorage.setItem('userId', response.user._id.toString())
         window.location.href = '/createtask'
       })
   }
@@ -31,7 +30,7 @@ export const SignIn = () => {
         <form onSubmit={handleSubmitSignin}>
           <div className='container__form'>
             <h2 className='container__title__form'>Iniciar sesión</h2>
-            <div className='title__form__signin'><box-icon name='book-open' color='black' size='18px' />
+            <div className='title__form__signin'><LogoForForm />
               <p className='text__title__form__signin'>Virtual Schedule</p>
             </div>
             <div className='list__buttons__form'>

@@ -1,27 +1,28 @@
 import './createtaskform.css'
+import { LogoForForm } from '../../components/icons/icons'
 
-export const CreateTask = ({ userId }) => {
+export const CreateTask = () => {
   const handleSubmitTask = (event) => {
     event.preventDefault()
-    let body = {}
+    const id = globalThis.localStorage.getItem('userId')
+    let body = { isCompleted: true, userId: id }
     for (const element of event.target.elements) {
-      console.log(element.value)
       if (element.name) {
         body = { ...body, [element.name]: element.value }
       }
     }
 
-    body.userId = userId
-
     fetch('https://birsbane-numbat-zjcf.1.us-1.fl0.io/api/todo', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
-      }
+      },
+
+      body: JSON.stringify(body)
+
     }).then(response => response.json())
       .then(response => {
-        response.isCompleted = false
-        window.alert('Se creó correctamente la tarea' + response.todo.name)
+        window.alert('Se creó correctamente la tarea ' + response.todo.name)
       })
   }
   return (
@@ -30,15 +31,15 @@ export const CreateTask = ({ userId }) => {
         <form onSubmit={handleSubmitTask}>
           <div className='container__form'>
             <h2 className='container__title__form'>!Somos tú agenda virtual¡</h2>
-            <div className='title__form'><box-icon name='book-open' color='black' size='21px' />
+            <div className='title__form'><LogoForForm />
               <p className='text__title__form'>Virtual Schedule</p>
             </div>
             <div className='list__buttons__form'>
               <div className='list__buttons__div'>
-                <input required name='name' id='name' className='inputs__form' type='text' placeholder='Dale un nombre a tu tarea' />
-                <textarea required name='description' className='description inputs__form' id='description' rows='10' placeholder='Agrega una descripción para tu tarea' />
+                <input id='name' name='name' className='inputs__form' type='text' placeholder='Dale un nombre a tu tarea' required />
+                <textarea id='description' name='description' className='description inputs__form' rows='10' placeholder='Agrega una descripción para tu tarea' required />
                 <label className='label__fecha__finalizacion' htmlFor='finishDate'>Fecha de finalizacion
-                  <input required name='finishate' id='finishDate' className='inputs__form date' type='date' />
+                  <input id='finishDate' name='finishDate' className='inputs__form date' type='date' required />
                 </label>
               </div>
             </div>

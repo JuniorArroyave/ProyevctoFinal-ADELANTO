@@ -82,6 +82,7 @@ main {
     align-items: center;
     display: flex;
     gap: 20px;
+    color: #dfe4e0;
 }
 
 .information__footer {
@@ -94,8 +95,4 @@ main {
     display: flex;
     margin-top: 10px;
     gap: 5px;
-}
-
-box-icon {
-    cursor: pointer;
 }

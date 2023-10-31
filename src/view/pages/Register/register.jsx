@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './register.css'
+import { LogoForForm } from '../../components/icons/icons'
 
 export const Register = () => {
   const handleSubmitRegister = (event) => {
@@ -29,7 +30,7 @@ export const Register = () => {
         <form onSubmit={handleSubmitRegister}>
           <div className='container__form'>
             <h2 className='container__title__form'>Formulario de registro</h2>
-            <div className='title__form'>
+            <div className='title__form'><LogoForForm />
               <p className='text__title__form'>Virtual Schedule</p>
             </div>
             <div className='list__buttons__form'>

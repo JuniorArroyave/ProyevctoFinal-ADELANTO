@@ -1,5 +1,6 @@
 import { Link, Outlet } from 'react-router-dom'
 import './Layout.css'
+import { Facebook, Instagram, Logo, Whatsapp } from '../icons/icons'
 
 /* <li><Link to='/services'>Servicios</Link></li> */
 
@@ -8,7 +9,7 @@ export const Layout = () => {
     <>
       <header className='header'>
         <div className='container__title'>
-          <box-icon name='book-open' color='#f9f5f5' size='md' />
+          <Logo />
           <h1 className='header__title'>Virtual Schedule</h1>
         </div>
         <nav className='header__menu'>
@@ -25,7 +26,9 @@ export const Layout = () => {
       <footer className='footer'>
         <div className='container__footer'>
           <div className='redes'>
-            <h1>face</h1>
+            <Facebook />
+            <Instagram />
+            <Whatsapp />
           </div>
           <div className='information'>
             <p className='information__footer'>Jacobo Garcés -- Mentor</p>
