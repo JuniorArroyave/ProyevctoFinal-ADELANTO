@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { createHashRouter } from 'react-router-dom'
 import { Layout } from '../components/Layout/Layout.jsx'
 import { Home } from '../pages/Home/home.jsx'
 import { Tasks } from '../pages/TaskList/tasklist.jsx'
@@ -8,7 +8,7 @@ import { CreateTask } from '../pages/Createtask/createtaskform.jsx'
 import { ErrorPage } from '../pages/Errorpage.jsx'
 import { ProtectedRoute } from './ProtectedRoute.jsx'
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/',
     Component: Layout,
