@@ -6,6 +6,7 @@ import { SignIn } from '../pages/SignIn/SignIn.jsx'
 import { Register } from '../pages/Register/register.jsx'
 import { CreateTask } from '../pages/Createtask/createtaskform.jsx'
 import { ErrorPage } from '../pages/Errorpage.jsx'
+import { ProtectedRoute } from './ProtectedRoute.jsx'
 
 export const router = createBrowserRouter([
   {
@@ -30,7 +31,12 @@ export const router = createBrowserRouter([
       },
       {
         path: 'createtask',
-        Component: CreateTask
+        element: (
+          <ProtectedRoute>
+            <CreateTask />
+          </ProtectedRoute>
+        )
+
       }
     ],
     ErrorBoundary: ErrorPage

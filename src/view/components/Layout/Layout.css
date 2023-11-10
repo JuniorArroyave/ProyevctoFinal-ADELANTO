@@ -96,3 +96,17 @@ main {
     margin-top: 10px;
     gap: 5px;
 }
+
+.logout {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: large;
+    font-family: 'Unbounded';
+    transition: 0.3s;
+}
+
+.logout:hover {
+    text-decoration: underline;
+    font-size: larger;
+}

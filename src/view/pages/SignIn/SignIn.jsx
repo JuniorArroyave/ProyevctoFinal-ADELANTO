@@ -1,8 +1,12 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './signin.css'
 import { LogoForForm } from '../../components/icons/icons'
+import { useContext } from 'react'
+import { TaskContext } from '../../../context/tasks'
 
 export const SignIn = () => {
+  const { dispatch } = useContext(TaskContext)
+  const navigate = useNavigate()
   const handleSubmitSignin = (event) => {
     event.preventDefault()
     let body = {}
@@ -20,8 +24,8 @@ export const SignIn = () => {
     }).then(response => response.json())
       .then(response => {
         window.alert('Bienvenido ' + response.user.firstName)
-        globalThis.localStorage.setItem('userId', response.user._id.toString())
-        window.location.href = '/createtask'
+        dispatch({ type: 'LOGIN', payload: response.user })
+        navigate('/createtask')
       })
   }
   return (

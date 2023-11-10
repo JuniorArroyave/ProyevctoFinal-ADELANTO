@@ -1,10 +1,16 @@
 import { Link, Outlet } from 'react-router-dom'
 import './Layout.css'
 import { Facebook, Instagram, Logo, Whatsapp } from '../icons/icons'
-
-/* <li><Link to='/services'>Servicios</Link></li> */
+import { useContext } from 'react'
+import { TaskContext } from '../../../context/tasks'
 
 export const Layout = () => {
+  const { state, dispatch } = useContext(TaskContext)
+
+  const Logout = () => {
+    window.alert('¿Estas seguro que quieres cerrar sesión?')
+    dispatch({ type: 'LOGOUT' })
+  }
   return (
     <>
       <header className='header'>
@@ -15,8 +21,9 @@ export const Layout = () => {
         <nav className='header__menu'>
           <ul className='header__list'>
             <li><Link to='/'>Inicio</Link></li>
-            <li><Link to='/register'>Registrarme</Link></li>
-            <li><Link to='/sign-in'>Iniciar Sesion</Link></li>
+            {!state.user && <li><Link to='/register'>Registrarme</Link></li>}
+            {!state.user && <li><Link to='/sign-in'>Iniciar Sesion</Link></li>}
+            {state.user && <li><button className='logout' onClick={Logout}>Cerrar Sesion</button></li>}
           </ul>
         </nav>
       </header>

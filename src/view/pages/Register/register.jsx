@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './register.css'
 import { LogoForForm } from '../../components/icons/icons'
 
 export const Register = () => {
+  const navigate = useNavigate()
   const handleSubmitRegister = (event) => {
     event.preventDefault()
     let body = {}
@@ -21,7 +22,7 @@ export const Register = () => {
       .then(response => {
         window.alert('el usuario ' + response.user.firstName + ' se creó correctamernte')
         event.target.reset()
-        window.location.href = '/sign-in'
+        navigate('/sign-in')
       })
   }
   return (
