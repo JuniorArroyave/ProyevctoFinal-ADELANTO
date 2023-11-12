@@ -14,6 +14,8 @@ export function reducer (state, action) {
       return { ...state, tasks: action.payload }
     case 'ADD_TASKS':
       return { ...state, tasks: [...state.tasks, action.payload] }
+    case 'UPDATE_TASK':
+      return { ...state, taskToUpdate: action.payload }
     default: return state
   }
 }
