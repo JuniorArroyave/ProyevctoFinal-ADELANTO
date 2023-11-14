@@ -2,9 +2,11 @@ import './tasklist.css'
 import { DeleteTask, EditTask, Taskcomplete, Taskpending } from '../../components/icons/icons'
 import { useContext, useEffect } from 'react'
 import { TaskContext } from '../../../context/tasks'
+import { initialState } from '../../../reducer/tasks'
 
 export const Tasks = () => {
-  const { state, dispatch } = useContext(TaskContext)
+  const { state, dispatch } = useContext(TaskContext, initialState)
+
   useEffect(() => {
     fetch(`https://birsbane-numbat-zjcf.1.us-1.fl0.io/api/todo?userId=${state.user._id}`)
       .then((response) => response.json())
@@ -12,6 +14,21 @@ export const Tasks = () => {
         dispatch({ type: 'LOAD_TASKS', payload: response.todos })
       })
   }, [])
+
+  const handleDelete = () => {
+    fetch('https://birsbane-numbat-zjcf.1.us-1.fl0.io/api/todo/' + state.tasks._id, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    )
+      .then(response => response.json())
+      .then(response => {
+        window.alert('Se eliminó correctamente la tarea ' + response.todo.name)
+        dispatch({ type: 'DELETE_TASK', payload: response.todo })
+      })
+  }
 
   return (
     <>
@@ -40,8 +57,8 @@ export const Tasks = () => {
                 <td><p>{task.name}</p></td>
                 <td><p>{task.description}</p></td>
                 <td><p>{task.finishDate}</p></td>
-                <td><button><EditTask /></button></td>
-                <td><button><DeleteTask /></button></td>
+                <td><button onClick={() => dispatch({ type: 'UPDATE_TASK', payload: task })}><EditTask /></button></td>
+                <td><button onClick={handleDelete}><DeleteTask /></button></td>
                 <td><button><Taskpending /></button></td>
                 <td><button><Taskcomplete /></button></td>
               </tr>

@@ -16,6 +16,9 @@ export function reducer (state, action) {
       return { ...state, tasks: [...state.tasks, action.payload] }
     case 'UPDATE_TASK':
       return { ...state, taskToUpdate: action.payload }
-    default: return state
+    case 'DELETE_TASK':
+      return { ...state, tasks: state.task.filter(tasks => tasks._id !== action.payload) }
+    default:
+      return state
   }
 }
