@@ -14,10 +14,15 @@ export function reducer (state, action) {
       return { ...state, tasks: action.payload }
     case 'ADD_TASKS':
       return { ...state, tasks: [...state.tasks, action.payload] }
-    case 'UPDATE_TASK':
+    case 'UPDATE_TASK': {
+      const index = state.tasks.findIndex(task => task._id === action.payload._id)
+      state.tasks[index] = action.payload
+      return { ...state, taskToUpdate: null }
+    }
+    case 'SET_UPDATE_TASK':
       return { ...state, taskToUpdate: action.payload }
     case 'DELETE_TASK':
-      return { ...state, tasks: state.task.filter(tasks => tasks._id !== action.payload) }
+      return { ...state, tasks: state.tasks.filter(task => task._id !== action.payload) }
     default:
       return state
   }

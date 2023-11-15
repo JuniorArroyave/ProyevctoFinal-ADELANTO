@@ -103,3 +103,12 @@
     font-size: 10px;
     font-weight: 100;
 }
+
+@media only screen and (max-width : 900px) {
+
+    .register {
+        width: 90%;
+        text-align: center;
+    }
+
+}

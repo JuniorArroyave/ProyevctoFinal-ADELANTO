@@ -51,7 +51,6 @@ body {
 }
 
 .header__list a:hover {
-    width: 100px;
     text-decoration: underline;
     font-size: 19px;
 }
@@ -109,4 +108,36 @@ main {
 .logout:hover {
     text-decoration: underline;
     font-size: larger;
+}
+
+
+/* Responsive */ 
+
+@media only screen and (max-width : 900px) {
+    
+    .header {
+        margin-top: 30px;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .header__list {
+        gap: 10px;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .header__list a:hover {
+        text-decoration: underline;
+        font-size: 18.5px;
+    }
+    
+    main {
+        padding: 0;
+        width: 100%;
+    }
 }

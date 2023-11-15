@@ -7,6 +7,7 @@ import { initialState } from '../../../reducer/tasks'
 
 export function CreateTask () {
   const { state, dispatch } = useContext(TaskContext, initialState)
+
   const text = state.taskToUpdate ? 'Actualizar' : 'Crear'
 
   const handleSubmitTask = (event) => {
@@ -30,10 +31,8 @@ export function CreateTask () {
       }).then(response => response.json())
         .then(response => {
           window.alert('Se actualizó correctamente la tarea ' + response.todo.name)
-          event.target.reset()
-          const index = state.tasks.findIndex(task => task._id === state.taskToUpdate._id)
-          state.tasks[index] = response.todo
           dispatch({ type: 'UPDATE_TASK', payload: response.todo })
+          event.target.reset()
         })
     }
 
@@ -71,7 +70,7 @@ export function CreateTask () {
                   <input id='name' name='name' className='inputs__form' type='text' placeholder='Dale un nombre a tu tarea' required defaultValue={state.taskToUpdate ? state.taskToUpdate.name : ''} />
                   <textarea id='description' name='description' className='description inputs__form' rows='10' placeholder='Agrega una descripción para tu tarea' required defaultValue={state.taskToUpdate ? state.taskToUpdate.description : ''} />
                   <label className='label__fecha__finalizacion' htmlFor='finishDate'>Fecha de finalizacion
-                    <input asp-for='MyDate' asp-format='{0:yyyy-MM-dd}' id='finishDate' name='finishDate' className='inputs__form date' type='date' required defaultValue={state.taskToUpdate ? state.taskToUpdate.finishDate : ''} />
+                    <input id='finishDate' name='finishDate' className='inputs__form date' type='date' required defaultValue={state.taskToUpdate ? state.taskToUpdate.finishDate : ''} />
                   </label>
                 </div>
               </div>

@@ -100,3 +100,11 @@
     font-family: 'Titan One';
     font-weight: 100;
 }
+
+@media only screen and (max-width : 900px) {
+
+    .signin {
+        width: 90%;
+    }
+
+}

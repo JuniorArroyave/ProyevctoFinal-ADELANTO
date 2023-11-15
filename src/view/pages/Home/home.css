@@ -31,5 +31,34 @@
     width: 50%;
 }
 
+@media only screen and (max-width : 900px) {
+
+    .home {
+        flex-direction: column;
+    }
+
+    .container__home {
+        width: 100%;
+        padding: 5px;
+    }
+    
+    .home__title {
+        width: 100%;
+        text-align: center;
+        font-size: 45px;
+    }
+
+    .home__description {
+        text-align: center;
+        font-size: 27px;
+    }
+
+    .carrusel {
+        margin-bottom: 30px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+}
 
 

@@ -108,3 +108,14 @@
     height: 100px;
     background-color: #80808050;
 }
+
+@media only screen and (max-width : 900px) {
+
+    .containerAll {
+        margin-bottom: 30px;
+        margin-top: 30px;
+        text-align: center;
+        width: 90%;
+    }
+
+}
