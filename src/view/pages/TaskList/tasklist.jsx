@@ -57,10 +57,10 @@ export const Tasks = () => {
                 <td><p>{task.name}</p></td>
                 <td><p>{task.description}</p></td>
                 <td><p>{task.finishDate}</p></td>
-                <td><button onClick={() => dispatch({ type: 'SET_UPDATE_TASK', payload: task })}><EditTask /></button></td>
-                <td><button onClick={() => handleDelete(task._id)}><DeleteTask /></button></td>
-                <td><button><Taskpending /></button></td>
-                <td><button><Taskcomplete /></button></td>
+                  <td><button onClick={() => dispatch({ type: 'SET_UPDATE_TASK', payload: task })}><EditTask /></button></td>
+                  <td><button onClick={() => handleDelete(task._id)}><DeleteTask /></button></td>
+                  <td><button><Taskpending /></button></td>
+                  <td><button><Taskcomplete /></button></td>
               </tr>
             ))}
           </tbody>

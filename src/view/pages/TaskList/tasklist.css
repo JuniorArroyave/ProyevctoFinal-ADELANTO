@@ -3,10 +3,11 @@
 
 
 .table__container {
+    width: 100%;
     text-align: center;
     border-radius: 10px;
     background-color: white;
-}
+ }
 
 .titles__head {
     font-family: 'Lexend Giga';
@@ -44,5 +45,30 @@
     .task {
         width: 100%;
     }
+
+    .table__container {
+        border: 0px;
+    }
+
+    .table__container thead {
+        display: none;
+    }
+
+    .table__container tr {
+        border-bottom: 4px solid grey;
+        margin-bottom: 8px;
+        display: block;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .table__container th, .table__container td {
+        font-size: 16px;
+    }
+
+    .table__container td {
+        display: block;
+    }
+
 
 }
