@@ -41,9 +41,31 @@ export const Taskcomplete = () => {
   )
 }
 
+export const TaskcompleteGreen = () => {
+  return (
+    <svg xmlns='http://www.w3.org/2000/svg' className='icon icon-tabler icon-tabler-calendar-check' width='30' height='30' viewBox='0 0 24 24' strokeWidth='2' stroke='currentColor' fill='none' strokeLinecap='round' strokeLinejoin='round' color='green'>
+      <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+      <path d='M11.5 21h-5.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v6' />
+      <path d='M16 3v4' />
+      <path d='M8 3v4' />
+      <path d='M4 11h16' />
+      <path d='M15 19l2 2l4 -4' />
+    </svg>
+  )
+}
+
 export const Taskpending = () => {
   return (
     <svg xmlns='http://www.w3.org/2000/svg' className='icon icon-tabler icon-tabler-alert-circle-filled' width='30' height='30' viewBox='0 0 24 24' strokeWidth='2' stroke='currentColor' fill='none' strokeLinecap='round' strokeLinejoin='round' color='red'>
+      <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+      <path d='M12 2c5.523 0 10 4.477 10 10a10 10 0 0 1 -19.995 .324l-.005 -.324l.004 -.28c.148 -5.393 4.566 -9.72 9.996 -9.72zm.01 13l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -8a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z' strokeWidth='0' fill='currentColor' />
+    </svg>
+  )
+}
+
+export const TaskpendingGrey = () => {
+  return (
+    <svg xmlns='http://www.w3.org/2000/svg' className='icon icon-tabler icon-tabler-alert-circle-filled' width='30' height='30' viewBox='0 0 24 24' strokeWidth='2' stroke='currentColor' fill='none' strokeLinecap='round' strokeLinejoin='round' color='grey'>
       <path stroke='none' d='M0 0h24v24H0z' fill='none' />
       <path d='M12 2c5.523 0 10 4.477 10 10a10 10 0 0 1 -19.995 .324l-.005 -.324l.004 -.28c.148 -5.393 4.566 -9.72 9.996 -9.72zm.01 13l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm-.01 -8a1 1 0 0 0 -.993 .883l-.007 .117v4l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-4l-.007 -.117a1 1 0 0 0 -.993 -.883z' strokeWidth='0' fill='currentColor' />
     </svg>

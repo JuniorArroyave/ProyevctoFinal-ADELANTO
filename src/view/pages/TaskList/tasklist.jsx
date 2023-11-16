@@ -1,5 +1,5 @@
 import './tasklist.css'
-import { DeleteTask, EditTask, Taskcomplete, Taskpending } from '../../components/icons/icons'
+import { DeleteTask, EditTask, Taskcomplete, TaskcompleteGreen, Taskpending, TaskpendingGrey } from '../../components/icons/icons'
 import { useContext, useEffect } from 'react'
 import { TaskContext } from '../../../context/tasks'
 import { initialState } from '../../../reducer/tasks'
@@ -30,6 +30,21 @@ export const Tasks = () => {
       })
   }
 
+  const completeTask = (taskId) => {
+    fetch('https://birsbane-numbat-zjcf.1.us-1.fl0.io/api/todo', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ ...state.tasks.find(task => task._id === taskId), isCompleted: false })
+    })
+      .then(response => response.json())
+      .then(response => {
+        window.alert('Se completó correctamente la tarea ' + response.todo.name)
+        dispatch({ type: 'COMPLETE_TASK', payload: response.todo._id })
+      })
+  }
+
   return (
     <>
       <div className='task'>
@@ -53,14 +68,14 @@ export const Tasks = () => {
           </thead>
           <tbody>
             {state.tasks.map((task) => (
-              <tr className='table__content' key={task._id}>
-                <td><p>{task.name}</p></td>
+              <tr className={`table__content ${task.isCompleted ? 'pending' : 'completed'}`} key={task._id}>
+                <td className='name__Task'><p>{task.name}</p></td>
                 <td><p>{task.description}</p></td>
                 <td><p>{task.finishDate}</p></td>
-                  <td><button onClick={() => dispatch({ type: 'SET_UPDATE_TASK', payload: task })}><EditTask /></button></td>
-                  <td><button onClick={() => handleDelete(task._id)}><DeleteTask /></button></td>
-                  <td><button><Taskpending /></button></td>
-                  <td><button><Taskcomplete /></button></td>
+                <td><button onClick={() => dispatch({ type: 'SET_UPDATE_TASK', payload: task })}><EditTask /></button></td>
+                <td><button onClick={() => handleDelete(task._id)}><DeleteTask /></button></td>
+                <td><button>{task.isCompleted ? <Taskpending /> : <TaskpendingGrey />}</button></td>
+                <td><button onClick={() => completeTask(task._id)}>{task.isCompleted ? <Taskcomplete /> : <TaskcompleteGreen />}</button></td>
               </tr>
             ))}
           </tbody>

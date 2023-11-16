@@ -12,7 +12,7 @@ export function CreateTask () {
 
   const handleSubmitTask = (event) => {
     event.preventDefault()
-    let body = { isCompleted: false, userId: state.user._id }
+    let body = { isCompleted: true, userId: state.user._id }
     for (const element of event.target.elements) {
       if (element.name) {
         body = { ...body, [element.name]: element.value }
