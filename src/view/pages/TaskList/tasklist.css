@@ -57,6 +57,20 @@
     color: red;
   }
 
+  .Button__search {
+    display: flex;
+    float: right;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    font-size: 12px;   
+    font-family: 'Unbounded';
+  }
+
 @media only screen and (max-width : 900px) {
 
     .task {

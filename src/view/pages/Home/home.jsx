@@ -7,8 +7,8 @@ export const Home = () => {
 
       <div className='home'>
         <div className='container__home'>
-          <h1 className='home__title'>!Aqui va un titulo¡</h1>
-          <p className='home__description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptas natus neque laudantium dignissimos quidem quis quaerat quisquam quo enim temporibus iure cupiditate eaque eos, excepturi, possimus repellendus odio numquam.</p>
+          <h1 className='home__title'>¡Vive a tu ritmo!</h1>
+          <p className='home__description'>Descubre una nueva era en la gestión de tareas con VirtualSchedule. Regístrate y sumérgete en un entorno donde tus tareas se sincronizan con el ritmo natural de tu día. Desde la primera tarea hasta el último logro, VirtualSchedule te acompaña en cada paso, transformando tu jornada en una experiencia armoniosa.</p>
         </div>
 
         <div className='carrusel'>

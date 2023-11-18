@@ -23,6 +23,7 @@ export const Layout = () => {
             <li><Link to='/'>Inicio</Link></li>
             {!state.user && <li><Link to='/register'>Registrarme</Link></li>}
             {!state.user && <li><Link to='/sign-in'>Iniciar Sesion</Link></li>}
+            {state.user && <li><Link to='/createtask'>Tareas</Link></li>}
             {state.user && <li><button className='logout' onClick={Logout}>Cerrar Sesion</button></li>}
           </ul>
         </nav>
@@ -33,12 +34,12 @@ export const Layout = () => {
       <footer className='footer'>
         <div className='container__footer'>
           <div className='redes'>
-            <Facebook />
+            <Link to='https://www.facebook.com/profile.php?id=100054311451751&mibextid=ZbWKwL'><Facebook /></Link>
             <Instagram />
-            <Whatsapp />
+            <Link to='https://wa.link/rj66x0'><Whatsapp /></Link>
           </div>
           <div className='information'>
-            <p className='information__footer'>Jacobo Garcés -- Mentor</p>
+            <p className='information__footer'>John Jairo Arroyave</p>
             <p className='information__footer'>©VirtualSchedule</p>
           </div>
         </div>
