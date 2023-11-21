@@ -10,7 +10,8 @@ export const Tasks = () => {
   const seracher = (e) => {
     setSearch(e.target.value)
   }
-  const results = !search ? state.tasks : state.tasks.filter((task) => task.name.toLowerCase().includes(search.toLocaleLowerCase()))
+
+  const results = !search ? state.tasks : state.tasks.filter((task) => (task.name + task.description).toLowerCase().includes(search.toLocaleLowerCase()))
 
   useEffect(() => {
     fetch(`https://birsbane-numbat-zjcf.1.us-1.fl0.io/api/todo?userId=${state.user._id}`)

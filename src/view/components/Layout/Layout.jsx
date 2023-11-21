@@ -35,7 +35,7 @@ export const Layout = () => {
         <div className='container__footer'>
           <div className='redes'>
             <Link to='https://www.facebook.com/profile.php?id=100054311451751&mibextid=ZbWKwL'><Facebook /></Link>
-            <Instagram />
+            <Link><Instagram /></Link>
             <Link to='https://wa.link/rj66x0'><Whatsapp /></Link>
           </div>
           <div className='information'>
