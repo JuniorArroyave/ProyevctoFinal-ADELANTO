@@ -2,10 +2,9 @@ import './tasklist.css'
 import { DeleteTask, EditTask, Taskcomplete, TaskcompleteGreen, Taskpending, TaskpendingGrey } from '../../components/icons/icons'
 import { useContext, useEffect, useState } from 'react'
 import { TaskContext } from '../../../context/tasks'
-import { initialState } from '../../../reducer/tasks'
 
 export const Tasks = () => {
-  const { state, dispatch } = useContext(TaskContext, initialState)
+  const { state, dispatch } = useContext(TaskContext)
   const [search, setSearch] = useState()
   const seracher = (e) => {
     setSearch(e.target.value)
@@ -54,7 +53,7 @@ export const Tasks = () => {
   return (
     <>
       <div className='task'>
-        <input className='Button__search' value={search} onChange={seracher} type='text' placeholder='Buscar por nombre' />
+        <input className='Button__search' value={search} onChange={seracher} type='text' placeholder='Buscar por nombre y descripción' />
         <table className='table__container'>
           <thead className='table__head'>
             <tr className='titles__head'>

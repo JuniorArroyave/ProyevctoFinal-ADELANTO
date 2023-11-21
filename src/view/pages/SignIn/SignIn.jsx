@@ -21,11 +21,19 @@ export const SignIn = () => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(body)
-    }).then(response => response.json())
-      .then(response => {
+    }).then((response) => {
+      if (!response.ok) {
+        throw new Error('Ha ocurrido un error. Verifica las credenciales.')
+      }
+      return response.json()
+    })
+      .then((response) => {
         window.alert('Bienvenido ' + response.user.firstName)
         dispatch({ type: 'LOGIN', payload: response.user })
         navigate('/createtask')
+      })
+      .catch((error) => {
+        window.alert(error.message)
       })
   }
   return (
